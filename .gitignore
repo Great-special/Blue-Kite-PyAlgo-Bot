@@ -1,0 +1,10 @@
+.mypy_cache
+kite_env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pyzw
+*.ipynb_checkpoints
