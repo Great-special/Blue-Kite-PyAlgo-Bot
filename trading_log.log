@@ -2116,3 +2116,586 @@ cwd: None
 2024-08-27 23:43:29,897 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2519.05, 'Order Block Low': 2517.75, 'Order Block Time': Timestamp('2024-08-26 23:30:00'), 'Order Block Location': 784}
 2024-08-27 23:43:31,849 - INFO - Analying Market for GOOGLE
 2024-08-27 23:43:32,688 - INFO - Analying Market for XAUUSD
+2025-03-05 16:08:57,125 - INFO - Thread Started: <Thread(Thread-1 (run_for_symbol), started 11820)>
+2025-03-05 16:08:57,127 - INFO - Thread Started: <Thread(Thread-2 (run_for_symbol), started 472)>
+2025-03-05 16:08:57,334 - INFO - Thread Started: <Thread(Thread-3 (run_for_symbol), started 8440)>
+2025-03-05 16:08:57,336 - INFO - Thread Started: <Thread(Thread-4 (run_for_symbol), started 11228)>
+2025-03-05 16:08:57,905 - INFO - Thread Started: <Thread(Thread-5 (run_for_symbol), started 10824)>
+2025-03-05 16:08:58,427 - INFO - Thread Started: <Thread(Thread-6 (run_for_symbol), started 8776)>
+2025-03-05 16:08:58,707 - INFO - Thread Started: <Thread(Thread-7 (run_for_symbol), started 10736)>
+2025-03-05 16:08:58,772 - INFO - Thread Started: <Thread(Thread-8 (run_for_symbol), started 6568)>
+2025-03-05 16:14:40,522 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:14:42,923 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:14:50,966 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:14:55,413 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:14:58,438 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:01,219 - DEBUG - TBB already found in load path
+2025-03-05 16:15:01,500 - DEBUG - TBB already found in load path
+2025-03-05 16:15:01,568 - DEBUG - TBB already found in load path
+2025-03-05 16:15:01,570 - DEBUG - TBB already found in load path
+2025-03-05 16:15:01,796 - DEBUG - TBB already found in load path
+2025-03-05 16:15:01,870 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:01,876 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:01,876 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:01,876 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:01,957 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:02,280 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:02,286 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:02,376 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:03,322 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\glp3h47b.json
+2025-03-05 16:15:03,793 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\yaemnsha.json
+2025-03-05 16:15:03,892 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\498memhl.json
+2025-03-05 16:15:04,062 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\26pv8ri7.json
+2025-03-05 16:15:04,063 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\jvvl0bt3.json
+2025-03-05 16:15:04,427 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:05,423 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\ha_gyqny.json
+2025-03-05 16:15:05,869 - DEBUG - idx 0
+2025-03-05 16:15:05,869 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:05,869 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=55360', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\glp3h47b.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\ha_gyqny.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_model42_b2176\\prophet_model-20250305161505.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:05,885 - INFO - Chain [1] start processing
+2025-03-05 16:15:06,068 - DEBUG - TBB already found in load path
+2025-03-05 16:15:06,124 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\r7o7stsa.json
+2025-03-05 16:15:06,215 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\r7ibx306.json
+2025-03-05 16:15:06,324 - DEBUG - idx 0
+2025-03-05 16:15:06,324 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:06,324 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=19816', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\jvvl0bt3.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\r7o7stsa.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modelywpmq6_i\\prophet_model-20250305161506.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:06,363 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:06,386 - DEBUG - idx 0
+2025-03-05 16:15:06,388 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:06,340 - INFO - Chain [1] start processing
+2025-03-05 16:15:06,397 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:06,400 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=11212', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\26pv8ri7.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\r7ibx306.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_model8naimxvt\\prophet_model-20250305161506.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:06,414 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\1w2u11n2.json
+2025-03-05 16:15:06,414 - INFO - Chain [1] start processing
+2025-03-05 16:15:06,439 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\orv1sxb_.json
+2025-03-05 16:15:06,607 - DEBUG - idx 0
+2025-03-05 16:15:06,616 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:06,616 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=17581', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\yaemnsha.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\1w2u11n2.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modelev_4s6mu\\prophet_model-20250305161506.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:06,617 - DEBUG - idx 0
+2025-03-05 16:15:06,617 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:06,618 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=25883', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\498memhl.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\orv1sxb_.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modelcn5gdk91\\prophet_model-20250305161506.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:06,616 - INFO - Chain [1] start processing
+2025-03-05 16:15:06,619 - INFO - Chain [1] start processing
+2025-03-05 16:15:06,717 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\ntn1x3qs.json
+2025-03-05 16:15:07,401 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\cx64bg1f.json
+2025-03-05 16:15:07,518 - DEBUG - idx 0
+2025-03-05 16:15:07,518 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:07,534 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=30582', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\ntn1x3qs.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\cx64bg1f.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_model3f01wpxs\\prophet_model-20250305161507.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:07,534 - INFO - Chain [1] start processing
+2025-03-05 16:15:12,172 - INFO - Chain [1] done processing
+2025-03-05 16:15:12,492 - INFO - Chain [1] done processing
+2025-03-05 16:15:12,910 - INFO - Chain [1] done processing
+2025-03-05 16:15:12,913 - INFO - Chain [1] done processing
+2025-03-05 16:15:13,617 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:15,134 - DEBUG - TBB already found in load path
+2025-03-05 16:15:15,411 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:15,549 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:15,549 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:15,693 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:16,200 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:16,189 - INFO - Chain [1] done processing
+2025-03-05 16:15:16,330 - INFO - Chain [1] done processing
+2025-03-05 16:15:17,026 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\0svxmnyb.json
+2025-03-05 16:15:17,026 - DEBUG - TBB already found in load path
+2025-03-05 16:15:17,092 - DEBUG - TBB already found in load path
+2025-03-05 16:15:17,093 - DEBUG - TBB already found in load path
+2025-03-05 16:15:17,115 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:17,210 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:17,288 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:17,380 - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-03-05 16:15:17,553 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:17,560 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:17,591 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:17,591 - INFO - Disabling weekly seasonality. Run prophet with weekly_seasonality=True to override this.
+2025-03-05 16:15:18,729 - DEBUG - TBB already found in load path
+2025-03-05 16:15:18,924 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\a7lw17te.json
+2025-03-05 16:15:19,009 - DEBUG - TBB already found in load path
+2025-03-05 16:15:19,009 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\fvuo5xwg.json
+2025-03-05 16:15:19,025 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:19,218 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2025-03-05 16:15:19,234 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\c26sopwq.json
+2025-03-05 16:15:19,268 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\l2ub0_ir.json
+2025-03-05 16:15:19,344 - DEBUG - idx 0
+2025-03-05 16:15:19,411 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:19,509 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=69138', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\0svxmnyb.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\fvuo5xwg.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_model5mcl7erm\\prophet_model-20250305161519.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:19,518 - INFO - Chain [1] start processing
+2025-03-05 16:15:20,187 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\lhfq1vzg.json
+2025-03-05 16:15:20,390 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\wksu9v_4.json
+2025-03-05 16:15:20,778 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\xvhns9gc.json
+2025-03-05 16:15:21,116 - DEBUG - idx 0
+2025-03-05 16:15:21,132 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:21,158 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=24742', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\a7lw17te.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\xvhns9gc.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modelm0ej0q5i\\prophet_model-20250305161521.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:21,158 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\tsgxqpe7.json
+2025-03-05 16:15:21,158 - INFO - Chain [1] start processing
+2025-03-05 16:15:21,373 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\5bmcb02b.json
+2025-03-05 16:15:21,501 - DEBUG - idx 0
+2025-03-05 16:15:21,507 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:21,570 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=28237', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\c26sopwq.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\tsgxqpe7.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modeljrrw6h59\\prophet_model-20250305161521.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:21,571 - INFO - Chain [1] start processing
+2025-03-05 16:15:21,740 - DEBUG - idx 0
+2025-03-05 16:15:21,740 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:21,741 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=66368', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\l2ub0_ir.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\5bmcb02b.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_model04jrc_zw\\prophet_model-20250305161521.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:21,741 - INFO - Chain [1] start processing
+2025-03-05 16:15:23,437 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\6xhiky0u.json
+2025-03-05 16:15:23,437 - DEBUG - idx 0
+2025-03-05 16:15:23,437 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:23,437 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=67038', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\wksu9v_4.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\6xhiky0u.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modelqcesacci\\prophet_model-20250305161523.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:23,437 - INFO - Chain [1] start processing
+2025-03-05 16:15:24,508 - DEBUG - input tempfile: C:\Users\GREATS~1\AppData\Local\Temp\tmp0hvdbzp6\s618gq1g.json
+2025-03-05 16:15:25,295 - DEBUG - idx 0
+2025-03-05 16:15:25,295 - DEBUG - running CmdStan, num_threads: None
+2025-03-05 16:15:25,296 - DEBUG - CmdStan args: ['D:\\my projects\\Light Wave\\Blue Kite\\kite_env\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=54061', 'data', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\lhfq1vzg.json', 'init=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\s618gq1g.json', 'output', 'file=C:\\Users\\GREATS~1\\AppData\\Local\\Temp\\tmp0hvdbzp6\\prophet_modely8i_984k\\prophet_model-20250305161525.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-03-05 16:15:25,297 - INFO - Chain [1] start processing
+2025-03-05 16:15:25,444 - INFO - Chain [1] done processing
+2025-03-05 16:15:28,057 - INFO - Chain [1] done processing
+2025-03-05 16:15:28,778 - INFO - Chain [1] done processing
+2025-03-05 16:15:30,119 - INFO - Chain [1] done processing
+2025-03-05 16:15:32,930 - INFO - Chain [1] done processing
+2025-03-05 16:15:33,627 - INFO - Chain [1] done processing
+2025-03-05 16:16:14,237 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.26585, 'Order Block Low': 1.26533, 'Order Block Time': Timestamp('2025-02-20 21:15:00'), 'Order Block Location': 33}
+2025-03-05 16:16:16,157 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 190.939, 'Order Block Low': 190.701, 'Order Block Time': Timestamp('2025-02-21 09:45:00'), 'Order Block Location': 83}
+2025-03-05 16:16:16,209 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 92065.54, 'Order Block Low': 91544.05, 'Order Block Time': Timestamp('2025-02-25 04:15:00'), 'Order Block Location': 61}
+2025-03-05 16:16:16,232 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 233.38, 'Order Block Low': 232.53, 'Order Block Time': Timestamp('2025-01-14 22:30:00'), 'Order Block Location': 18}
+2025-03-05 16:16:16,236 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2941.89, 'Order Block Low': 2939.27, 'Order Block Time': Timestamp('2025-02-20 21:00:00'), 'Order Block Location': 68}
+2025-03-05 16:16:16,735 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.2677399999999999, 'Order Block Low': 1.26689, 'Order Block Time': Timestamp('2025-02-21 09:45:00'), 'Order Block Location': 83}
+2025-03-05 16:16:17,649 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 88131.14, 'Order Block Low': 87566.54, 'Order Block Time': Timestamp('2025-02-25 13:15:00'), 'Order Block Location': 97}
+2025-03-05 16:16:18,041 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 231.19, 'Order Block Low': 230.44, 'Order Block Time': Timestamp('2025-01-16 19:45:00'), 'Order Block Location': 59}
+2025-03-05 16:16:18,203 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2949.83, 'Order Block Low': 2945.04, 'Order Block Time': Timestamp('2025-02-21 03:15:00'), 'Order Block Location': 89}
+2025-03-05 16:16:19,277 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 199.79, 'Order Block Low': 199.5, 'Order Block Time': Timestamp('2025-01-21 21:00:00'), 'Order Block Location': 116}
+2025-03-05 16:16:19,296 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.213, 'Order Block Low': 189.082, 'Order Block Time': Timestamp('2025-02-24 07:00:00'), 'Order Block Location': 168}
+2025-03-05 16:16:19,346 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 86914.44, 'Order Block Low': 86459.74, 'Order Block Time': Timestamp('2025-02-25 21:15:00'), 'Order Block Location': 129}
+2025-03-05 16:16:19,605 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2931.41, 'Order Block Low': 2927.51, 'Order Block Time': Timestamp('2025-02-21 14:00:00'), 'Order Block Location': 132}
+2025-03-05 16:16:19,691 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 198.88, 'Order Block Low': 197.89, 'Order Block Time': Timestamp('2025-01-21 22:45:00'), 'Order Block Location': 123}
+2025-03-05 16:16:19,838 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.2629299999999999, 'Order Block Low': 1.26267, 'Order Block Time': Timestamp('2025-02-21 23:30:00'), 'Order Block Location': 138}
+2025-03-05 16:16:19,864 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2939.18, 'Order Block Low': 2931.9, 'Order Block Time': Timestamp('2025-02-21 16:45:00'), 'Order Block Location': 143}
+2025-03-05 16:16:20,178 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 198.87, 'Order Block Low': 198.11, 'Order Block Time': Timestamp('2025-01-23 17:15:00'), 'Order Block Location': 153}
+2025-03-05 16:16:20,570 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 188.502, 'Order Block Low': 188.222, 'Order Block Time': Timestamp('2025-02-24 17:45:00'), 'Order Block Location': 211}
+2025-03-05 16:16:20,721 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 197.31, 'Order Block Low': 196.81, 'Order Block Time': Timestamp('2025-01-23 22:30:00'), 'Order Block Location': 174}
+2025-03-05 16:16:20,921 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.061, 'Order Block Low': 188.949, 'Order Block Time': Timestamp('2025-02-24 20:30:00'), 'Order Block Location': 222}
+2025-03-05 16:16:20,966 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.26575, 'Order Block Low': 1.26462, 'Order Block Time': Timestamp('2025-02-24 11:15:00'), 'Order Block Location': 185}
+2025-03-05 16:16:21,008 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 198.73, 'Order Block Low': 198.3, 'Order Block Time': Timestamp('2025-01-24 18:00:00'), 'Order Block Location': 182}
+2025-03-05 16:16:21,559 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.093, 'Order Block Low': 188.963, 'Order Block Time': Timestamp('2025-02-25 01:30:00'), 'Order Block Location': 242}
+2025-03-05 16:16:21,614 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.144, 'Order Block Low': 189.035, 'Order Block Time': Timestamp('2025-02-25 01:45:00'), 'Order Block Location': 243}
+2025-03-05 16:16:21,837 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 89227.44, 'Order Block Low': 89072.54, 'Order Block Time': Timestamp('2025-02-26 13:00:00'), 'Order Block Location': 192}
+2025-03-05 16:16:21,933 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 196.62, 'Order Block Low': 195.74, 'Order Block Time': Timestamp('2025-01-27 17:45:00'), 'Order Block Location': 207}
+2025-03-05 16:16:22,176 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 193.84, 'Order Block Low': 192.32, 'Order Block Time': Timestamp('2025-01-27 21:30:00'), 'Order Block Location': 222}
+2025-03-05 16:16:22,187 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 86852.14, 'Order Block Low': 85611.86, 'Order Block Time': Timestamp('2025-02-26 16:30:00'), 'Order Block Location': 206}
+2025-03-05 16:16:22,453 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 223.6, 'Order Block Low': 222.37, 'Order Block Time': Timestamp('2025-01-23 22:45:00'), 'Order Block Location': 175}
+2025-03-05 16:16:22,529 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2956.2, 'Order Block Low': 2950.03, 'Order Block Time': Timestamp('2025-02-24 16:00:00'), 'Order Block Location': 232}
+2025-03-05 16:16:23,032 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 223.05, 'Order Block Low': 222.23, 'Order Block Time': Timestamp('2025-01-24 22:45:00'), 'Order Block Location': 201}
+2025-03-05 16:16:23,136 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.326, 'Order Block Low': 189.184, 'Order Block Time': Timestamp('2025-02-25 14:30:00'), 'Order Block Location': 294}
+2025-03-05 16:16:23,893 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 231.35, 'Order Block Low': 230.52, 'Order Block Time': Timestamp('2025-01-27 22:30:00'), 'Order Block Location': 226}
+2025-03-05 16:16:23,965 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.2677100000000001, 'Order Block Low': 1.26655, 'Order Block Time': Timestamp('2025-02-25 17:30:00'), 'Order Block Location': 306}
+2025-03-05 16:16:24,122 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.26501, 'Order Block Low': 1.26404, 'Order Block Time': Timestamp('2025-02-25 19:15:00'), 'Order Block Location': 313}
+2025-03-05 16:16:24,286 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 195.94, 'Order Block Low': 194.92, 'Order Block Time': Timestamp('2025-01-29 22:45:00'), 'Order Block Location': 279}
+2025-03-05 16:16:24,416 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.26719, 'Order Block Low': 1.26662, 'Order Block Time': Timestamp('2025-02-25 23:30:00'), 'Order Block Location': 330}
+2025-03-05 16:16:24,735 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.26619, 'Order Block Low': 1.2661, 'Order Block Time': Timestamp('2025-02-26 00:30:00'), 'Order Block Location': 334}
+2025-03-05 16:16:25,005 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 200.65, 'Order Block Low': 200.05, 'Order Block Time': Timestamp('2025-01-30 21:45:00'), 'Order Block Location': 301}
+2025-03-05 16:16:25,904 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 238.54, 'Order Block Low': 238.28, 'Order Block Time': Timestamp('2025-01-30 20:15:00'), 'Order Block Location': 295}
+2025-03-05 16:16:26,243 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2944.83, 'Order Block Low': 2938.46, 'Order Block Time': Timestamp('2025-02-25 16:30:00'), 'Order Block Location': 326}
+2025-03-05 16:16:26,341 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 188.923, 'Order Block Low': 188.785, 'Order Block Time': Timestamp('2025-02-26 12:30:00'), 'Order Block Location': 382}
+2025-03-05 16:16:26,671 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.26388, 'Order Block Low': 1.26358, 'Order Block Time': Timestamp('2025-02-26 08:15:00'), 'Order Block Location': 365}
+2025-03-05 16:16:27,122 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 239.79, 'Order Block Low': 238.94, 'Order Block Time': Timestamp('2025-01-31 19:30:00'), 'Order Block Location': 318}
+2025-03-05 16:16:27,601 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 202.31, 'Order Block Low': 200.9, 'Order Block Time': Timestamp('2025-02-03 22:45:00'), 'Order Block Location': 357}
+2025-03-05 16:16:27,942 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2916.88, 'Order Block Low': 2914.32, 'Order Block Time': Timestamp('2025-02-26 01:30:00'), 'Order Block Location': 358}
+2025-03-05 16:16:28,887 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.26877, 'Order Block Low': 1.26827, 'Order Block Time': Timestamp('2025-02-26 21:45:00'), 'Order Block Location': 419}
+2025-03-05 16:16:29,068 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 231.05, 'Order Block Low': 230.12, 'Order Block Time': Timestamp('2025-02-04 18:15:00'), 'Order Block Location': 365}
+2025-03-05 16:16:29,988 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 84081.34, 'Order Block Low': 83803.74, 'Order Block Time': Timestamp('2025-03-01 03:15:00'), 'Order Block Location': 441}
+2025-03-05 16:16:30,041 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 189.577, 'Order Block Low': 189.37, 'Order Block Time': Timestamp('2025-02-27 21:00:00'), 'Order Block Location': 512}
+2025-03-05 16:16:30,133 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 85636.44, 'Order Block Low': 85150.34, 'Order Block Time': Timestamp('2025-03-01 04:45:00'), 'Order Block Location': 447}
+2025-03-05 16:16:30,761 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 191.16, 'Order Block Low': 189.75, 'Order Block Time': Timestamp('2025-02-07 16:30:00'), 'Order Block Location': 436}
+2025-03-05 16:16:31,054 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 188.766, 'Order Block Low': 188.651, 'Order Block Time': Timestamp('2025-02-28 00:45:00'), 'Order Block Location': 527}
+2025-03-05 16:16:31,156 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 188.54, 'Order Block Low': 188.427, 'Order Block Time': Timestamp('2025-02-28 01:15:00'), 'Order Block Location': 529}
+2025-03-05 16:16:31,226 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 185.55, 'Order Block Low': 185.1, 'Order Block Time': Timestamp('2025-02-07 22:30:00'), 'Order Block Location': 460}
+2025-03-05 16:16:31,717 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2892.48, 'Order Block Low': 2888.94, 'Order Block Time': Timestamp('2025-02-27 16:15:00'), 'Order Block Location': 509}
+2025-03-05 16:16:31,789 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.25999, 'Order Block Low': 1.25964, 'Order Block Time': Timestamp('2025-02-28 02:00:00'), 'Order Block Location': 532}
+2025-03-05 16:16:32,350 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.26102, 'Order Block Low': 1.26041, 'Order Block Time': Timestamp('2025-02-28 03:15:00'), 'Order Block Location': 537}
+2025-03-05 16:16:32,400 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2887.61, 'Order Block Low': 2885.84, 'Order Block Time': Timestamp('2025-02-27 21:00:00'), 'Order Block Location': 528}
+2025-03-05 16:16:32,745 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 228.84, 'Order Block Low': 228.27, 'Order Block Time': Timestamp('2025-02-10 21:30:00'), 'Order Block Location': 482}
+2025-03-05 16:16:32,759 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 227.83, 'Order Block Low': 227.22, 'Order Block Time': Timestamp('2025-02-10 22:45:00'), 'Order Block Location': 487}
+2025-03-05 16:16:32,847 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.559, 'Order Block Low': 189.424, 'Order Block Time': Timestamp('2025-02-28 14:30:00'), 'Order Block Location': 582}
+2025-03-05 16:16:33,094 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 184.97, 'Order Block Low': 184.77, 'Order Block Time': Timestamp('2025-02-11 21:15:00'), 'Order Block Location': 507}
+2025-03-05 16:16:33,086 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 2882.15, 'Order Block Low': 2878.44, 'Order Block Time': Timestamp('2025-02-28 03:30:00'), 'Order Block Location': 550}
+2025-03-05 16:16:33,730 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.25916, 'Order Block Low': 1.25834, 'Order Block Time': Timestamp('2025-02-28 13:30:00'), 'Order Block Location': 578}
+2025-03-05 16:16:34,498 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.26218, 'Order Block Low': 1.26061, 'Order Block Time': Timestamp('2025-02-28 17:30:00'), 'Order Block Location': 594}
+2025-03-05 16:16:34,527 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2857.37, 'Order Block Low': 2851.05, 'Order Block Time': Timestamp('2025-02-28 10:45:00'), 'Order Block Location': 579}
+2025-03-05 16:16:34,900 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.25793, 'Order Block Low': 1.2576399999999999, 'Order Block Time': Timestamp('2025-02-28 23:30:00'), 'Order Block Location': 618}
+2025-03-05 16:16:35,336 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 184.08, 'Order Block Low': 183.69, 'Order Block Time': Timestamp('2025-02-12 22:00:00'), 'Order Block Location': 536}
+2025-03-05 16:16:35,535 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 86333.51, 'Order Block Low': 86134.94, 'Order Block Time': Timestamp('2025-03-02 09:45:00'), 'Order Block Location': 563}
+2025-03-05 16:16:35,957 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 236.67, 'Order Block Low': 235.56, 'Order Block Time': Timestamp('2025-02-13 17:00:00'), 'Order Block Location': 542}
+2025-03-05 16:16:36,387 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 85999.99, 'Order Block Low': 85876.22, 'Order Block Time': Timestamp('2025-03-02 15:00:00'), 'Order Block Location': 584}
+2025-03-05 16:16:36,412 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 190.909, 'Order Block Low': 190.686, 'Order Block Time': Timestamp('2025-03-03 13:15:00'), 'Order Block Location': 673}
+2025-03-05 16:16:36,533 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 242.22, 'Order Block Low': 241.67, 'Order Block Time': Timestamp('2025-02-13 22:00:00'), 'Order Block Location': 562}
+2025-03-05 16:16:36,628 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 85351.99, 'Order Block Low': 85078.0, 'Order Block Time': Timestamp('2025-03-02 17:00:00'), 'Order Block Location': 592}
+2025-03-05 16:16:36,805 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 191.933, 'Order Block Low': 191.699, 'Order Block Time': Timestamp('2025-03-03 15:00:00'), 'Order Block Location': 680}
+2025-03-05 16:16:36,820 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 241.65, 'Order Block Low': 241.0, 'Order Block Time': Timestamp('2025-02-13 22:45:00'), 'Order Block Location': 565}
+2025-03-05 16:16:36,998 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2864.52, 'Order Block Low': 2863.38, 'Order Block Time': Timestamp('2025-03-03 06:15:00'), 'Order Block Location': 653}
+2025-03-05 16:16:37,540 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 190.98, 'Order Block Low': 190.528, 'Order Block Time': Timestamp('2025-03-03 21:45:00'), 'Order Block Location': 707}
+2025-03-05 16:16:37,691 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 189.725, 'Order Block Low': 189.16, 'Order Block Time': Timestamp('2025-03-03 22:45:00'), 'Order Block Location': 711}
+2025-03-05 16:16:37,950 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.26979, 'Order Block Low': 1.2683499999999999, 'Order Block Time': Timestamp('2025-03-03 22:45:00'), 'Order Block Location': 711}
+2025-03-05 16:16:38,185 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 243.08, 'Order Block Low': 241.99, 'Order Block Time': Timestamp('2025-02-18 21:15:00'), 'Order Block Location': 611}
+2025-03-05 16:16:38,357 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 244.46, 'Order Block Low': 243.14, 'Order Block Time': Timestamp('2025-02-18 22:45:00'), 'Order Block Location': 617}
+2025-03-05 16:16:39,240 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 93344.77, 'Order Block Low': 92925.93, 'Order Block Time': Timestamp('2025-03-03 08:00:00'), 'Order Block Location': 652}
+2025-03-05 16:16:39,700 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 190.02, 'Order Block Low': 189.617, 'Order Block Time': Timestamp('2025-03-04 10:45:00'), 'Order Block Location': 759}
+2025-03-05 16:16:39,793 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 1.27411, 'Order Block Low': 1.27245, 'Order Block Time': Timestamp('2025-03-04 11:45:00'), 'Order Block Location': 763}
+2025-03-05 16:16:39,967 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 189.366, 'Order Block Low': 189.17, 'Order Block Time': Timestamp('2025-03-04 13:00:00'), 'Order Block Location': 768}
+2025-03-05 16:16:40,224 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 247.85, 'Order Block Low': 247.41, 'Order Block Time': Timestamp('2025-02-21 21:00:00'), 'Order Block Location': 688}
+2025-03-05 16:16:40,355 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2889.49, 'Order Block Low': 2887.26, 'Order Block Time': Timestamp('2025-03-04 06:15:00'), 'Order Block Location': 745}
+2025-03-05 16:16:41,012 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 2887.85, 'Order Block Low': 2884.3, 'Order Block Time': Timestamp('2025-03-04 08:45:00'), 'Order Block Location': 755}
+2025-03-05 16:16:41,226 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 90923.01, 'Order Block Low': 90056.6, 'Order Block Time': Timestamp('2025-03-03 19:45:00'), 'Order Block Location': 699}
+2025-03-05 16:16:42,135 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 1.2778399999999999, 'Order Block Low': 1.27734, 'Order Block Time': Timestamp('2025-03-05 05:30:00'), 'Order Block Location': 834}
+2025-03-05 16:16:42,288 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 191.087, 'Order Block Low': 190.561, 'Order Block Time': Timestamp('2025-03-04 23:00:00'), 'Order Block Location': 808}
+2025-03-05 16:16:42,337 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 243.79, 'Order Block Low': 242.84, 'Order Block Time': Timestamp('2025-02-26 19:15:00'), 'Order Block Location': 759}
+2025-03-05 16:16:42,515 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 175.46, 'Order Block Low': 174.67, 'Order Block Time': Timestamp('2025-02-25 18:30:00'), 'Order Block Location': 730}
+2025-03-05 16:16:42,911 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 83399.99, 'Order Block Low': 83040.65, 'Order Block Time': Timestamp('2025-03-04 10:00:00'), 'Order Block Location': 756}
+2025-03-05 16:17:16,805 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 191.853, 'Order Block Low': 191.539, 'Order Block Time': Timestamp('2025-03-05 15:00:00'), 'Order Block Location': 872}
+2025-03-05 16:17:17,020 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 82905.88, 'Order Block Low': 82024.86, 'Order Block Time': Timestamp('2025-03-04 18:30:00'), 'Order Block Location': 790}
+2025-03-05 16:17:17,966 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 167.57, 'Order Block Low': 167.13, 'Order Block Time': Timestamp('2025-02-28 21:15:00'), 'Order Block Location': 819}
+2025-03-05 16:17:19,167 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 169.23, 'Order Block Low': 168.7, 'Order Block Time': Timestamp('2025-03-03 21:30:00'), 'Order Block Location': 846}
+2025-03-05 16:17:20,408 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 173.29, 'Order Block Low': 172.76, 'Order Block Time': Timestamp('2025-03-04 22:15:00'), 'Order Block Location': 875}
+2025-03-06 09:40:52,205 - INFO - Thread Started: <Thread(Thread-1 (run_for_symbol), started 3924)>
+2025-03-06 09:40:52,319 - INFO - Thread Started: <Thread(Thread-2 (run_for_symbol), started 9920)>
+2025-03-06 09:40:52,376 - INFO - Thread Started: <Thread(Thread-3 (run_for_symbol), started 11208)>
+2025-03-06 09:40:52,446 - INFO - Thread Started: <Thread(Thread-4 (run_for_symbol), started 10156)>
+2025-03-06 09:40:52,541 - INFO - Thread Started: <Thread(Thread-5 (run_for_symbol), started 9196)>
+2025-03-06 09:40:52,657 - INFO - Thread Started: <Thread(Thread-6 (run_for_symbol), started 5012)>
+2025-03-06 09:40:52,764 - INFO - Thread Started: <Thread(Thread-7 (run_for_symbol), started 12840)>
+2025-03-06 09:40:52,896 - INFO - Thread Started: <Thread(Thread-8 (run_for_symbol), started 14216)>
+2025-03-06 10:20:18,155 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 34}
+2025-03-06 10:20:19,861 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 75}
+2025-03-06 10:20:20,131 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 130}
+2025-03-06 10:20:20,348 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 149}
+2025-03-06 10:20:21,045 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 304}
+2025-03-06 10:20:21,076 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 314}
+2025-03-06 10:20:21,530 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 451}
+2025-03-06 10:20:21,593 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 469}
+2025-03-06 10:20:21,640 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 485}
+2025-03-06 10:20:21,778 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 528}
+2025-03-06 10:20:22,051 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 624}
+2025-03-06 10:20:22,214 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 690}
+2025-03-06 10:20:22,490 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 818}
+2025-03-06 10:20:22,521 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 825}
+2025-03-06 11:46:29,195 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 27}
+2025-03-06 11:46:29,309 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 68}
+2025-03-06 11:46:29,403 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 123}
+2025-03-06 11:46:29,450 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 142}
+2025-03-06 11:46:29,921 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 297}
+2025-03-06 11:46:29,948 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 307}
+2025-03-06 11:46:30,497 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 444}
+2025-03-06 11:46:30,548 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 462}
+2025-03-06 11:46:30,580 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 478}
+2025-03-06 11:46:30,686 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 521}
+2025-03-06 11:46:30,912 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 617}
+2025-03-06 11:46:31,106 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 683}
+2025-03-06 11:46:31,428 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 811}
+2025-03-06 11:46:31,448 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 818}
+2025-03-06 12:01:20,681 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:01:20,795 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:01:20,934 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:01:20,999 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:01:21,398 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:01:21,415 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:01:21,953 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:01:22,045 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:01:22,115 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:01:22,196 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:01:22,445 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:01:22,579 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:01:22,941 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:01:22,945 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:02:02,414 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:02:02,477 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:02:02,645 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:02:02,674 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:02:03,009 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:02:03,026 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:02:03,463 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:02:03,554 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:02:03,633 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:02:03,827 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:02:04,226 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:02:04,424 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:02:04,722 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:02:04,738 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:06:19,247 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:06:19,350 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:06:19,478 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:06:19,525 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:06:19,783 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:06:19,817 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:06:20,136 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:06:20,182 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:06:20,249 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:06:20,336 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:06:20,578 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:06:20,760 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:06:20,975 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:06:20,998 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:09:04,749 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:09:04,845 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:09:04,938 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:09:04,970 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:09:05,282 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:09:05,313 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:09:05,610 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:09:05,657 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:09:05,720 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:09:05,860 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:09:06,203 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:09:06,343 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:09:06,596 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:09:06,611 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:10:09,458 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:10:09,525 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:10:09,674 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:10:09,737 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:10:10,161 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:10:10,191 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:10:10,773 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:10:10,856 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:10:10,923 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:10:11,055 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:10:11,304 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:10:11,483 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:10:11,871 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:10:11,887 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:11:40,693 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:11:40,781 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:11:40,893 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:11:40,960 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:11:41,325 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:11:41,352 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:11:41,762 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:11:41,857 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:11:41,954 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:11:42,193 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:11:42,496 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:11:42,707 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:11:43,022 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:11:43,036 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 12:16:35,563 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 25}
+2025-03-06 12:16:35,698 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 66}
+2025-03-06 12:16:35,843 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 121}
+2025-03-06 12:16:35,897 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 140}
+2025-03-06 12:16:36,295 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 295}
+2025-03-06 12:16:36,345 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 305}
+2025-03-06 12:16:36,665 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 442}
+2025-03-06 12:16:36,722 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 460}
+2025-03-06 12:16:36,768 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 476}
+2025-03-06 12:16:36,909 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 519}
+2025-03-06 12:16:37,106 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 615}
+2025-03-06 12:16:37,322 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 681}
+2025-03-06 12:16:37,615 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 809}
+2025-03-06 12:16:37,633 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 816}
+2025-03-06 15:19:25,811 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 22}
+2025-03-06 15:19:26,014 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 63}
+2025-03-06 15:19:26,174 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 118}
+2025-03-06 15:19:26,245 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 137}
+2025-03-06 15:19:26,690 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 292}
+2025-03-06 15:19:26,728 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 302}
+2025-03-06 15:19:27,148 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 439}
+2025-03-06 15:19:27,192 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 457}
+2025-03-06 15:19:27,244 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 473}
+2025-03-06 15:19:27,484 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 516}
+2025-03-06 15:19:28,010 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 612}
+2025-03-06 15:19:28,292 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 678}
+2025-03-06 15:19:28,789 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 806}
+2025-03-06 15:19:28,817 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 813}
+2025-03-06 15:25:15,198 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 12}
+2025-03-06 15:25:15,298 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 53}
+2025-03-06 15:25:15,410 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 108}
+2025-03-06 15:25:15,452 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 127}
+2025-03-06 15:25:15,829 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 282}
+2025-03-06 15:25:15,868 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 292}
+2025-03-06 15:25:16,211 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 429}
+2025-03-06 15:25:16,235 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 447}
+2025-03-06 15:25:16,279 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 463}
+2025-03-06 15:25:16,429 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 506}
+2025-03-06 15:25:16,702 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 602}
+2025-03-06 15:25:16,861 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 668}
+2025-03-06 15:25:17,403 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 796}
+2025-03-06 15:25:17,439 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 803}
+2025-03-06 15:30:35,919 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 12}
+2025-03-06 15:30:36,188 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 53}
+2025-03-06 15:30:36,389 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 108}
+2025-03-06 15:30:36,510 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 127}
+2025-03-06 15:30:37,376 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 282}
+2025-03-06 15:30:37,409 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 292}
+2025-03-06 15:30:38,042 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 429}
+2025-03-06 15:30:38,142 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 447}
+2025-03-06 15:30:38,201 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 463}
+2025-03-06 15:30:38,323 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 506}
+2025-03-06 15:30:38,640 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 602}
+2025-03-06 15:30:38,866 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 668}
+2025-03-06 15:30:39,257 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 796}
+2025-03-06 15:30:39,296 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 803}
+2025-03-06 15:38:17,919 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 11}
+2025-03-06 15:38:18,024 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 52}
+2025-03-06 15:38:18,124 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 107}
+2025-03-06 15:38:18,159 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 126}
+2025-03-06 15:38:18,470 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 281}
+2025-03-06 15:38:18,496 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 291}
+2025-03-06 15:38:18,737 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 428}
+2025-03-06 15:38:18,779 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 446}
+2025-03-06 15:38:18,802 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 462}
+2025-03-06 15:38:18,890 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 505}
+2025-03-06 15:38:19,137 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 601}
+2025-03-06 15:38:19,380 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 667}
+2025-03-06 15:38:19,716 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 795}
+2025-03-06 15:38:19,734 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 802}
+2025-03-06 16:49:54,619 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82784, 'Order Block Low': 0.82761, 'Order Block Time': Timestamp('2025-02-21 15:15:00'), 'Order Block Location': 7}
+2025-03-06 16:49:54,747 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 48}
+2025-03-06 16:49:54,883 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 103}
+2025-03-06 16:49:54,936 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 122}
+2025-03-06 16:49:55,266 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 277}
+2025-03-06 16:49:55,301 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 287}
+2025-03-06 16:49:55,624 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 424}
+2025-03-06 16:49:55,700 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 442}
+2025-03-06 16:49:55,750 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 458}
+2025-03-06 16:49:55,888 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 501}
+2025-03-06 16:49:56,159 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 597}
+2025-03-06 16:49:56,331 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 663}
+2025-03-06 16:49:56,625 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 791}
+2025-03-06 16:49:56,658 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 798}
+2025-03-06 16:57:44,856 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 47}
+2025-03-06 16:57:44,958 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 102}
+2025-03-06 16:57:44,992 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 121}
+2025-03-06 16:57:45,365 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 276}
+2025-03-06 16:57:45,401 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 286}
+2025-03-06 16:57:45,723 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 423}
+2025-03-06 16:57:45,765 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 441}
+2025-03-06 16:57:45,807 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 457}
+2025-03-06 16:57:45,923 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 500}
+2025-03-06 16:57:46,127 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 596}
+2025-03-06 16:57:46,298 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 662}
+2025-03-06 16:57:46,584 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 790}
+2025-03-06 16:57:46,597 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 797}
+2025-03-06 17:04:03,358 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 46}
+2025-03-06 17:04:03,485 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 101}
+2025-03-06 17:04:03,552 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 120}
+2025-03-06 17:04:03,958 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 275}
+2025-03-06 17:04:03,997 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 285}
+2025-03-06 17:04:04,539 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 422}
+2025-03-06 17:04:04,658 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 440}
+2025-03-06 17:04:04,757 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 456}
+2025-03-06 17:04:04,857 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 499}
+2025-03-06 17:04:05,092 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 595}
+2025-03-06 17:04:05,290 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 661}
+2025-03-06 17:04:05,567 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 789}
+2025-03-06 17:04:05,595 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 796}
+2025-03-06 17:08:01,247 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 46}
+2025-03-06 17:08:01,398 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 101}
+2025-03-06 17:08:01,480 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 120}
+2025-03-06 17:08:01,878 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 275}
+2025-03-06 17:08:01,914 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 285}
+2025-03-06 17:08:02,565 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 422}
+2025-03-06 17:08:02,667 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 440}
+2025-03-06 17:08:02,704 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 456}
+2025-03-06 17:08:02,853 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 499}
+2025-03-06 17:08:03,200 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 595}
+2025-03-06 17:08:03,382 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 661}
+2025-03-06 17:08:03,738 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 789}
+2025-03-06 17:08:03,753 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 796}
+2025-03-06 17:08:55,338 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 46}
+2025-03-06 17:08:55,472 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 101}
+2025-03-06 17:08:55,544 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 120}
+2025-03-06 17:08:55,975 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 275}
+2025-03-06 17:08:56,006 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 285}
+2025-03-06 17:08:56,630 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 422}
+2025-03-06 17:08:56,742 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 440}
+2025-03-06 17:08:56,856 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 456}
+2025-03-06 17:08:56,987 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 499}
+2025-03-06 17:08:57,252 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 595}
+2025-03-06 17:08:57,461 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 661}
+2025-03-06 17:08:57,764 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 789}
+2025-03-06 17:08:57,795 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 796}
+2025-03-06 18:54:00,002 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 46}
+2025-03-06 18:54:00,202 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 101}
+2025-03-06 18:54:00,314 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 120}
+2025-03-06 18:54:00,812 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 275}
+2025-03-06 18:54:00,841 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 285}
+2025-03-06 18:54:01,298 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 422}
+2025-03-06 18:54:01,465 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 440}
+2025-03-06 18:54:01,492 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 456}
+2025-03-06 18:54:01,602 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 499}
+2025-03-06 18:54:01,801 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 595}
+2025-03-06 18:54:01,949 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 661}
+2025-03-06 18:54:02,180 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 789}
+2025-03-06 18:54:02,197 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 796}
+2025-03-06 18:55:24,276 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 39}
+2025-03-06 18:55:24,403 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 94}
+2025-03-06 18:55:24,439 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 113}
+2025-03-06 18:55:24,696 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 268}
+2025-03-06 18:55:24,712 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 278}
+2025-03-06 18:55:24,963 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 415}
+2025-03-06 18:55:24,995 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 433}
+2025-03-06 18:55:25,040 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 449}
+2025-03-06 18:55:25,170 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 492}
+2025-03-06 18:55:25,478 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 588}
+2025-03-06 18:55:25,719 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 654}
+2025-03-06 18:55:25,942 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 782}
+2025-03-06 18:55:25,959 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 789}
+2025-03-06 18:56:54,141 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 39}
+2025-03-06 18:56:54,258 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 94}
+2025-03-06 18:56:54,306 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 113}
+2025-03-06 18:56:54,571 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 268}
+2025-03-06 18:56:54,598 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 278}
+2025-03-06 18:56:54,897 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 415}
+2025-03-06 18:56:54,939 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 433}
+2025-03-06 18:56:54,991 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 449}
+2025-03-06 18:56:55,094 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 492}
+2025-03-06 18:56:55,269 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 588}
+2025-03-06 18:56:55,423 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 654}
+2025-03-06 18:56:55,651 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 782}
+2025-03-06 18:56:55,667 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 789}
+2025-03-06 19:00:47,449 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 38}
+2025-03-06 19:00:47,623 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 93}
+2025-03-06 19:00:47,657 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 112}
+2025-03-06 19:00:48,145 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 267}
+2025-03-06 19:00:48,161 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 277}
+2025-03-06 19:00:48,478 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 414}
+2025-03-06 19:00:48,511 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 432}
+2025-03-06 19:00:48,543 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 448}
+2025-03-06 19:00:48,698 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 491}
+2025-03-06 19:00:48,946 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 587}
+2025-03-06 19:00:49,069 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 653}
+2025-03-06 19:00:49,384 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 781}
+2025-03-06 19:00:49,419 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 788}
+2025-03-06 19:07:58,822 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 38}
+2025-03-06 19:07:58,938 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 93}
+2025-03-06 19:07:58,994 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 112}
+2025-03-06 19:07:59,232 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 267}
+2025-03-06 19:07:59,251 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 277}
+2025-03-06 19:07:59,449 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 414}
+2025-03-06 19:07:59,483 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 432}
+2025-03-06 19:07:59,518 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 448}
+2025-03-06 19:07:59,632 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 491}
+2025-03-06 19:07:59,809 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 587}
+2025-03-06 19:07:59,940 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 653}
+2025-03-06 19:08:00,180 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 781}
+2025-03-06 19:08:00,198 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 788}
+2025-03-06 19:11:42,188 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82797, 'Order Block Low': 0.82781, 'Order Block Time': Timestamp('2025-02-24 01:30:00'), 'Order Block Location': 38}
+2025-03-06 19:11:42,298 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82862, 'Order Block Low': 0.82815, 'Order Block Time': Timestamp('2025-02-24 15:15:00'), 'Order Block Location': 93}
+2025-03-06 19:11:42,352 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82858, 'Order Block Low': 0.82836, 'Order Block Time': Timestamp('2025-02-24 20:00:00'), 'Order Block Location': 112}
+2025-03-06 19:11:42,637 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83023, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 10:45:00'), 'Order Block Location': 267}
+2025-03-06 19:11:42,656 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83051, 'Order Block Low': 0.82991, 'Order Block Time': Timestamp('2025-02-26 13:15:00'), 'Order Block Location': 277}
+2025-03-06 19:11:42,933 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82532, 'Order Block Low': 0.82516, 'Order Block Time': Timestamp('2025-02-27 23:30:00'), 'Order Block Location': 414}
+2025-03-06 19:11:42,996 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82489, 'Order Block Low': 0.82455, 'Order Block Time': Timestamp('2025-02-28 04:00:00'), 'Order Block Location': 432}
+2025-03-06 19:11:43,052 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.82553, 'Order Block Low': 0.8254, 'Order Block Time': Timestamp('2025-02-28 08:00:00'), 'Order Block Location': 448}
+2025-03-06 19:11:43,136 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8267, 'Order Block Low': 0.82618, 'Order Block Time': Timestamp('2025-02-28 18:45:00'), 'Order Block Location': 491}
+2025-03-06 19:11:43,368 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.8262, 'Order Block Low': 0.82587, 'Order Block Time': Timestamp('2025-03-03 18:45:00'), 'Order Block Location': 587}
+2025-03-06 19:11:43,618 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.82713, 'Order Block Low': 0.82674, 'Order Block Time': Timestamp('2025-03-04 11:15:00'), 'Order Block Location': 653}
+2025-03-06 19:11:44,030 - INFO - Identified Order Block: {'Order Block': 'Bearish', 'Order Block High': 0.83806, 'Order Block Low': 0.83769, 'Order Block Time': Timestamp('2025-03-05 19:15:00'), 'Order Block Location': 781}
+2025-03-06 19:11:44,042 - INFO - Identified Order Block: {'Order Block': 'Bullish', 'Order Block High': 0.83602, 'Order Block Low': 0.83574, 'Order Block Time': Timestamp('2025-03-05 21:00:00'), 'Order Block Location': 788}
