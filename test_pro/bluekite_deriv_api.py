@@ -55,11 +55,12 @@ TIMEFRAME_MAP = {
 
 class BlueKiteModel:
     
-    def __init__(self, symbol, mode='test', time_frame=H1, duration=880, risk_percentage=1.0, window_size=10, reward_ratio=1.8, retrain=True):
+    def __init__(self, symbol, data=None, mode='test', time_frame=H1, duration=880, risk_percentage=1.0, window_size=10, reward_ratio=1.8, retrain=True):
         self.mode = mode
         self.symbol = symbol
         self.time_frame = time_frame
         self.retrain = retrain
+        self.data = data
         self.lot_size = 0.01  # Default lot size
         self.risk_percentage = risk_percentage
         self.window_size = window_size
@@ -69,31 +70,7 @@ class BlueKiteModel:
         self.new_high = None
         self.new_low = None
         self.recent_order_block = None 
-        self.used_order_block = None
-        self.api = None
-        
-        # Setup logging
-        logging.basicConfig(filename='trading_log.log', level=logging.INFO, 
-                            format='%(asctime)s - %(levelname)s - %(message)s')
-    
-    async def initialize(self):
-        # Initialize the Deriv API connection
-        self.api = DerivAPI(endpoint='wss://ws.derivws.com/websockets/v3', app_id=app_id)
-        authorize = await self.api.authorize(api_token)
-        logging.info(f"Deriv API authorized: {authorize}")
-        
-        # Get account info
-        self.account_info = await self.get_account_info()
-        
-        # Get symbol info
-        self.symbol_info = await self.get_symbol_info(self.symbol)
-        
-        # Get historical data
-        self.data = await self.get_symbol_data(self.symbol, self.time_frame, duration=880)
-        
-        # Load order blocks
         self.used_order_block = self.load_order_blocks(self.symbol)
-        
         if self.retrain:
             # Perform initial analysis and model training
             self.best_arima_order = pm.auto_arima(self.data['Close'], seasonal=False, stepwise=True, trace=True).order
@@ -107,85 +84,11 @@ class BlueKiteModel:
             self.garch_model = joblib.load(f"garch_{self.symbol}_{self.time_frame}_model.pkl")
             
         self.combined_trend_forecast, self.slope = self.combined_forecast_garch_prophet_rf(self.context_data_frame['close_forecast'], self.garch_model, self.data, mode=self.mode)
+       
         
-        return self
-    
-    async def get_account_info(self):
-        """Get account information from Deriv API"""
-        try:
-            response = await self.api.send({'get_account_status': 1})
-            balance_request = await self.api.send({'balance': 1})
-            
-            account_info = {
-                'balance': balance_request.get('balance', {}).get('balance', 0),
-                'currency': balance_request.get('balance', {}).get('currency', 'USD'),
-                'leverage': 100,  # Default leverage since Deriv API might not provide this directly
-                'account_type': response.get('get_account_status', {}).get('status', 'unknown')
-            }
-            logging.info(f"Account info retrieved: {account_info}")
-            return account_info
-        except Exception as e:
-            logging.error(f"Error getting account info: {e}")
-            return {'balance': 0, 'currency': 'USD', 'leverage': 100, 'account_type': 'unknown'}
-    
-    async def get_symbol_info(self, symbol):
-        """Get symbol information from Deriv API"""
-        try:
-            active_symbols = await self.api.active_symbols({"active_symbols": "full"})
-            for sym in active_symbols.get('active_symbols', []):
-                if sym.get('symbol') == symbol:
-                    return sym
-            logging.warning(f"Symbol {symbol} not found in active symbols")
-            return None
-        except Exception as e:
-            logging.error(f"Error getting symbol info: {e}")
-            return None
-    
-    async def get_symbol_data(self, symbol, time_frame, duration=880):
-        """Get historical price data for the symbol using Deriv API."""
-        try:
-            # Convert time_frame to granularity in seconds
-            granularity = TIMEFRAME_MAP.get(time_frame, 3600)  # Default to 1 hour
-            
-            # Calculate start time based on duration and granularity
-            end_epoch = int(time.time())
-            start_epoch = end_epoch - (granularity * duration)
-            
-            # Request candles from Deriv API
-            candles_request = {
-                "ticks_history": symbol,
-                "granularity": granularity,
-                "start": start_epoch,
-                "end": end_epoch,
-                "style": "candles"
-            }
-            
-            response = await self.api.send(candles_request)
-            
-            if 'candles' not in response or not response['candles']:
-                logging.error(f"Failed to get candles for {symbol}")
-                return pd.DataFrame()
-            
-            # Extract candle data
-            candles = response['candles']
-            data = []
-            
-            for candle in candles:
-                data.append({
-                    'time': datetime.datetime.fromtimestamp(candle['epoch']),
-                    'Open': float(candle['open']),
-                    'High': float(candle['high']),
-                    'Low': float(candle['low']),
-                    'Close': float(candle['close'])
-                })
-            
-            df = pd.DataFrame(data)
-            logging.info(f"Retrieved {len(df)} candles for {symbol}")
-            return df
-        
-        except Exception as e:
-            logging.error(f"Error fetching data for {symbol}: {e}")
-            return pd.DataFrame()
+        # Setup logging
+        logging.basicConfig(filename='trading_log.log', level=logging.INFO, 
+                            format='%(asctime)s - %(levelname)s - %(message)s')
     
     def load_order_blocks(self, symbol):
         blocks = get_used_order_blocks(symbol=symbol)
@@ -567,8 +470,9 @@ class BlueKiteModel:
         except Exception as e:
             logging.error(f"Error in calculate_indicators: {e}")
 
-    async def analyze_market(self):
+    def analyze_market(self):
         try:
+            print('HERE-Analyze Market')
             # Step 1: Calculate Technical Indicators
             self.calculate_indicators()
 
@@ -673,16 +577,182 @@ class BlueKiteModel:
                         
                         
                         self.recent_order_block = latest_order_block
-                    
+                    print('here')
                     if order_type:
-                         self.send_order(
-                                symbol=self.symbol,
-                                lot_size=self.lot_size,
-                                order_type=order_type,
-                                entry_price=entry_price,
-                                sl=stop_loss,
-                                tp=take_profit,
-                                comment=f"{market_condition} order block"
-                            )
+                        #  self.send_order(
+                        #         symbol=self.symbol,
+                        #         lot_size=self.lot_size,
+                        #         order_type=order_type,
+                        #         entry_price=entry_price,
+                        #         sl=stop_loss,
+                        #         tp=take_profit,
+                        #         comment=f"{market_condition} order block"
+                        #     )
+                        print('returned')
+                        return {
+                            'symbol':self.symbol,
+                            'lot_size':self.lot_size,
+                            'order_type':order_type,
+                            'entry_price':entry_price,
+                            'sl':stop_loss,
+                            'tp':take_profit,
+                            'comment':f"{market_condition} order block"
+                        }
+                    else:
+                        return {}
+                else:
+                    print("Expired Order Block")
+            else:
+                print("No Order Block")
         except Exception as e:
             logging.error(f"Error in analyze_market: {e}")
+            
+
+async def blueMain():
+    # Initialize the Deriv API connection
+    api = DerivAPI(app_id=app_id)
+    authorize = await api.authorize(api_token)
+    print(authorize.keys())
+    
+    symbols = await get_symbols(api)
+    symbol = 'frxEURNZD'
+    for sym in symbols:
+        if sym['symbol'] == symbol:
+            lot_size = sym['lot_size']
+            print(lot_size)
+            break
+    # Get account info
+    account_info = await get_account_info(api)
+    
+    # Get historical data
+    data = await get_symbol_data(symbol, api=api, time_frame=M15, duration=880)
+    
+    model = BlueKiteModel(symbol=symbol, data=data, mode='live', time_frame=M15, retrain=False)
+    proposal = model.analyze_market()
+    
+    # Risk Management
+    account_balance = account_info.get('balance', 0)
+    account_leverage = account_info.get('leverage', 100)
+    
+    # Calculate risk
+    try:
+        order_type = proposal.get('order_type')
+        entry_price = proposal.get('entry_price')
+        sl = proposal.get('sl')
+        tp = proposal.get('tp')
+        
+        if order_type in [BUY, BUY_LIMIT]:
+            price = entry_price
+            amt_risk = (price - sl) * lot_size / account_leverage
+            print(f"Buy order - Price: {price}, SL: {sl}, TP: {tp}, Risk: {amt_risk}")
+        else:
+            price = entry_price
+            amt_risk = (sl - price) * lot_size / account_leverage
+            print(f"Sell order - Price: {price}, SL: {sl}, TP: {tp}, Risk: {amt_risk}")
+
+        risk_margin = (price * lot_size) / account_leverage
+        print(f"Risk margin: {risk_margin}")
+        
+        # Check if risk is acceptable
+        if risk_margin < (account_balance * 0.03) and amt_risk < (account_balance * 0.1):
+            # Prepare trading parameters
+            duration_unit = "d"  # day
+            duration = 1  # 1 day
+            
+            # Convert contract type to Deriv API format
+    except:
+        pass
+
+async def get_account_info(api):
+    """Get account information from Deriv API"""
+    try:
+        # response = await api.send({'get_account_status': 1})
+        # print(response, 'account status')
+        
+        balance_request = await api.balance()
+        """
+        If you want to retrieve all available trading instruments for a specific asset (e.g., Gold), you would use the asset parameter in the API request.
+        If you want to retrieve market data or place a trade for a specific instrument (e.g., R_100), you would use the symbol parameter.
+        """
+        # assets = await api.asset_index({"asset_index": 1})
+        # print(assets.get('asset_index'))
+        
+        account_info = {
+            'balance': balance_request.get('balance', {}).get('balance', 0),
+            'currency': balance_request.get('balance', {}).get('currency', 'USD'),
+            'leverage': 100,  # Default leverage since Deriv API might not provide this directly
+            # 'account_type': response.get('get_account_status', {})
+        }
+        # print(account_info)
+        return account_info
+    except Exception as e:
+        logging.error(f"Error getting account info: {e}")
+        return {'balance': 0, 'currency': 'USD', 'leverage': 100, 'account_type': 'unknown'}
+
+
+async def get_symbols(api):
+        active_symbols = await api.active_symbols({"active_symbols": "full"})
+        print('active symbols',  len(active_symbols.get('active_symbols')))
+        symbols = [
+            {'market_type':syn_row.get('market'), 
+             'symbol':syn_row.get('symbol'), 
+             'lot_size':syn_row.get('pip'), 
+             'symbol_display_name':syn_row.get('display_name'), 
+             'is_open':syn_row.get('exchange_is_open'), 
+             'is_suspended':syn_row.get('is_trading_suspended')}
+            for syn_row in active_symbols.get('active_symbols')
+            ]
+        return symbols
+
+
+
+async def get_symbol_data(symbol, time_frame, api, duration=880):
+    """Get historical price data for the symbol using Deriv API."""
+    try:
+        # Convert time_frame to granularity in seconds
+        granularity = TIMEFRAME_MAP.get(time_frame, 3600)  # Default to 1 hour
+        
+        # Calculate start time based on duration and granularity
+        end_epoch = int(time.time())
+        start_epoch = end_epoch - (granularity * duration)
+        
+        # Request candles from Deriv API
+        candles_request = {
+            "ticks_history": symbol,
+            "granularity": granularity,
+            "start": start_epoch,
+            "end": end_epoch,
+            "style": "candles"
+        }
+        
+        response = await api.send(candles_request)
+        
+        if 'candles' not in response or not response['candles']:
+            logging.error(f"Failed to get candles for {symbol}")
+            return pd.DataFrame()
+        
+        # Extract candle data
+        candles = response['candles']
+        data = []
+        
+        for candle in candles:
+            data.append({
+                'time': datetime.datetime.fromtimestamp(candle['epoch']),
+                'Open': float(candle['open']),
+                'High': float(candle['high']),
+                'Low': float(candle['low']),
+                'Close': float(candle['close'])
+            })
+        
+        df = pd.DataFrame(data)
+        logging.info(f"Retrieved {len(df)} candles for {symbol}")
+        return df
+    
+    except Exception as e:
+        logging.error(f"Error fetching data for {symbol}: {e}")
+        return pd.DataFrame()
+
+
+
+
+asyncio.run(blueMain())

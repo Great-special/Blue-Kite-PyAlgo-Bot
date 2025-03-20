@@ -770,7 +770,7 @@ class BlueKiteModel:
                     self.recent_order_block = latest_order_block
                     
                     if order_type:
-                         self.send_order(
+                        self.send_order(
                                 symbol=self.symbol,
                                 lot_size=self.lot_size,
                                 order_type=order_type,
@@ -779,6 +779,12 @@ class BlueKiteModel:
                                 tp=take_profit,
                                 comment=f"{market_condition} order block"
                             )
+                    else:
+                        print('No Order Type')
+                else:
+                    print("Expired Order Block")     
+            else:
+                print("No Order Block")
         except Exception as e:
             logging.error(f"Error in analyze_market: {e}")
             
