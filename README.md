@@ -22,14 +22,10 @@ BlueKite is a Python-based algorithmic trading bot that leverages Random Forest 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bluekite-pyalgo.git
+git clone https://github.com/Great-special/Blue-Kite-PyAlgo-Bot.git
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Configure your API keys
-cp config.example.yaml config.yaml
-# Edit config.yaml with your API credentials
 
 # Run the bot
 python bluekite.py
