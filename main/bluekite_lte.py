@@ -3,17 +3,17 @@ import pandas as pd
 import MetaTrader5 as mt5
 import logging
 import joblib
+import time
 
-import itertools
 import schedule
 import datetime
-import time
 import pmdarima as pm
 import warnings
 import pandas_ta as ta
 
 from db import insert_order_block, get_used_order_blocks
 from threading import Thread
+
 # Machine Learning
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.stats.diagnostic import het_arch
@@ -23,12 +23,16 @@ from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, r2_score
 
 # Web scraping
+from news_data import get_news_data
+# from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
 
-from textblob import TextBlob
 
+nltk.download('vader_lexicon')
 
 # Automatic order selection for ARIMA
 warnings.filterwarnings("ignore")
@@ -50,7 +54,12 @@ SELL_LIMIT = mt5.ORDER_TYPE_SELL_LIMIT
 
 class BlueKiteModel:
     
-    def __init__(self, symbol, mode='test', time_frame=H1, duration=1880, risk_percentage=1.0, window_size=10, reward_ratio=1.8, retrain=True):
+    def __init__(self, symbol, mode='test', time_frame=H1, duration=1880, risk_percentage=1.0, window_size=10, reward_ratio=1.8, retrain=True, risk_level='Medium'):
+        
+        if risk_level.lower() in ['high', 'low', 'medium']:
+            self.risk_level = risk_level
+        else:
+            raise ValueError("Risk level must be 'High', 'Medium', or 'Low'.")
         #print('-'*20, symbol, '-'*20)
         self.mode =  mode
         self.symbol = symbol
@@ -308,30 +317,59 @@ class BlueKiteModel:
         target_encoded = le.fit_transform(target)
         
         # Train Random Forest classifier
-        model = RandomForestClassifier(n_estimators=350, random_state=42)
+        model = RandomForestClassifier(n_estimators=50, random_state=42)
         model.fit(features, target_encoded)
         self.save_models(model, 'RFC_market_condition', self.symbol, self.time_frame)
         return le
         
-    def predict_market_condition(self, data):
-        encoded = self.classify_market_condition(self.data)
-        
-        # Predict current market condition
-        features = data[['RSI', 'ATR', '20MA', '50MA', 
-                        'BBands_Upper', 'BBands_Middle', 'BBands_Lower',
-                        'MACD', 'MACD_SIGNAL', 'MACD_HIST']]
-        
-        # Add Price Action features
-        features['Close_Diff'] = data['Close'].diff()
-        features['High_Low_Range'] = data['High'] - data['Low']
-        
+    def predict_market_condition(self,  mode='test'):
+        # Train-test split
+        if mode != "live" or self.retrain:
+            train_len = int(len(self.data) * 0.7)
+            train = self.data[:train_len]
+            test = self.data[train_len:]
+            
+            # Encode labels from training data
+            encoded = self.classify_market_condition(train)
+        else:
+            # Use entire dataset for live mode
+            encoded = self.classify_market_condition(self.data)
+
+        # Prepare features
+        features = self.data[['RSI', 'ATR', '20MA', '50MA',
+                            'BBands_Upper', 'BBands_Middle', 'BBands_Lower',
+                            'MACD', 'MACD_SIGNAL', 'MACD_HIST']].copy()
+
+        # Add price action features
+        features['Close_Diff'] = self.data['Close'].diff()
+        features['High_Low_Range'] = self.data['High'] - self.data['Low']
+
+        # Drop NaNs from engineered features
+        features.dropna(inplace=True)
+
+        # Load model
         model = joblib.load(f"RFC_market_condition_{self.symbol}_{self.time_frame}_model.pkl")
+
+        # Get last row for current prediction
         current_features = features.iloc[-1].values.reshape(1, -1)
-        predicted_condition = encoded.inverse_transform(model.predict(current_features))[0]
+
+        # Predict condition
+        y_pred_label = model.predict(current_features)
+        predicted_condition = encoded.inverse_transform(y_pred_label)[0]
+
+        # Get probabilities
         probability = model.predict_proba(current_features)
-        # accuracy = np.mean(predicted_condition == encoded)
-        # print(f"Model Accuracy: {accuracy * 100:.2f}%")
-        print(f"Probability {probability}")
+
+        # Accuracy (test mode only)
+        # if mode != 'live':
+        #     aligned_y_true = y_true[-len(features):]  # Ensure y_true aligns with feature length
+        #     y_pred_all = model.predict(features)
+        #     accuracy = accuracy_score(aligned_y_true, y_pred_all)
+        #     print(f"Test Accuracy: {accuracy:.2f}")
+        #     print('Random ForestClassifier Report')
+        #     print(classification_report(aligned_y_true, y_pred_all, target_names=encoded.classes_))
+
+        print(f"Prediction Probability: {probability}")
         return predicted_condition, probability[0].max()
     
     def combined_forecast_garch_prophet_rf(self, prophet_forecast, garch_model, data, price='Close', period=30, mode='test'):
@@ -351,9 +389,9 @@ class BlueKiteModel:
         garch_forecast_mean_expanded = np.repeat(garch_forecast.variance.iloc[-1, 0], prophet_forecast.values.shape[0])
         
         print(len(garch_forecast_mean_expanded))
-        print(garch_forecast_mean_expanded)
+        # print(garch_forecast_mean_expanded)
         print(prophet_forecast.values.shape)
-        print(prophet_forecast.values)
+        # print(prophet_forecast.values)
         
         # Combine features
         X = np.column_stack([prophet_forecast.values, garch_forecast_mean_expanded])
@@ -374,7 +412,7 @@ class BlueKiteModel:
             print("y Shape train-test:", y_train.shape, y_test.shape)
             
             # Train Random Forest model
-            model = RandomForestRegressor(n_estimators=350, random_state=42)
+            model = RandomForestRegressor(n_estimators=50, random_state=42)
             model.fit(X_train, y_train)
             
             # Predict
@@ -387,97 +425,20 @@ class BlueKiteModel:
             mape = np.mean(np.abs((y_test - combined_forecast) / y_test)) * 100
             accuracy = 100 - mape
             
-            print('Random Forest Evaluation Classifition Report:')
-            print(classification_report(y_test, combined_forecast))
-            print(f'MAE (Random Forest): {mae}')
-            print(f'MSE (Random Forest): {mse}')
-            print(f'RMSE (Random Forest): {rmse}')
+            print('Random Forest Regression Evaluation Report:')
+            print(f'MAE (Random Forest) values closer to zero are better: {mae}')
+            print(f'MSE (Random Forest) values closer to zero are better: {mse}')
+            print(f'RMSE (Random Forest) values closer to zero are better: {rmse}')
+            print(f'MAPE (Random Forest) values closer to zero are better: {mean_absolute_percentage_error(y_test, combined_forecast)}, {mape}')
             print(f'Accuracy (Random Forest): {accuracy:.2f}%')
-            print("Accuracy:", accuracy_score(y_test, combined_forecast))
+            print(f"Accuracy R2 Score (Random Forest) values closer to one are better: {r2_score(y_test, combined_forecast)}")
         else:
             # Train on full dataset
-            model = RandomForestRegressor(n_estimators=350, random_state=42)
+            model = RandomForestRegressor(n_estimators=50, random_state=42)
             model.fit(X, y)
             combined_forecast = model.predict(X)
         
         return pd.DataFrame({'combined_forecast': combined_forecast}), None
-        
-    # def combined_forecast_garch_prophet_lr(self, prophet_forecast, garch_forecast, data, price='Close', period=30, mode='test'):
-    #     if not mode == "live":
-    #         #print("Shape of prophet_forecast.values:", prophet_forecast.values.shape)
-    #         #print("Shape of garch_forecast.mean:", garch_forecast.variance['h.01'].shape)
-            
-    #         # Expand garch_forecast_mean to match the shape of prophet_forecast_values
-    #         garch_forecast_mean_expanded = np.repeat(garch_forecast.variance['h.01'], prophet_forecast.values.shape[0])
-
-    #         # Verify shapes
-    #         #print("Shape of prophet_forecast.values:", prophet_forecast.values.shape)
-    #         #print("Shape of garch_forecast.mean (expanded):", garch_forecast_mean_expanded.shape)
-
-    #         # Combine arrays
-    #         X_full = np.vstack([prophet_forecast.values, garch_forecast_mean_expanded]).T
-    #         #print("Combined Forecast Shape:", X_full.shape)
-    #         # print(X_full)
-                
-    #         # Prepare combined dataset for machine learning
-    #         test_len = int(len(data)*0.7)
-    #         y_full = data[price][test_len:].values
-
-    #         # Train-test split
-    #         split_index = len(X_full) - period
-    #         X_train, X_test = X_full[:split_index], X_full[split_index:]
-    #         y_train, y_test = y_full[:split_index], y_full[split_index:]
-
-
-    #         # Train the model
-    #         model = LinearRegression()
-    #         model.fit(X_train, y_train)
-
-
-    #         # Predict
-    #         combined_forecast_ml = model.predict(X_test)
-    #         # print(combined_forecast_ml)
-            
-    #         # Evaluation
-    #         actual = y_test
-    #         mae_ml = mean_absolute_error(actual, combined_forecast_ml)
-    #         mse_ml = mean_squared_error(actual, combined_forecast_ml)
-    #         rmse_ml = np.sqrt(mse_ml)
-    #         mape_ml = mean_absolute_percentage_error(actual, combined_forecast_ml)
-    #         accuracy = 100 * (1 -mape_ml)
-
-    #         print(f'MAE (ML): {mae_ml}, MSE (ML): {mse_ml}, RMSE (ML): {rmse_ml}')
-    #         print(f'Accuracy (ML): {accuracy:.2f}')
-    #         print('Model Slope', model.coef_[0])
-            
-    #         return pd.DataFrame({'combined_forecast':combined_forecast_ml}), model.coef_[0]
-    #     else:
-    #         # Expand garch_forecast_mean to match the shape of prophet_forecast_values
-    #         garch_forecast_mean_expanded = np.repeat(garch_forecast.variance['h.01'], prophet_forecast.values.shape[0])
-
-    #         # Verify shapes
-    #         #print("Shape of prophet_forecast.values:", prophet_forecast.values.shape)
-    #         #print("Shape of garch_forecast.mean (expanded):", garch_forecast_mean_expanded.shape)
-
-    #         # Combine arrays
-    #         X = np.vstack([prophet_forecast.values, garch_forecast_mean_expanded]).T
-    #         #print("Combined Forecast Shape:", X.shape)
-    #         # print(X)
-            
-    #         # Prepare combined dataset for machine learning
-            
-    #         y = data[price][abs(len(X)-len(data)):].values
-    #         #print(y.shape)
-    #         # Train the model
-    #         model = LinearRegression()
-    #         model.fit(X, y)
-    #         # Predict
-    #         combined_forecast_ml = model.predict(X)
-    #         # print(combined_forecast_ml)
-    #         #print('Model Slope', model.coef_[0])
-            
-    #         return pd.DataFrame({'combined_forecast':combined_forecast_ml}), model.coef_[0]
-
 
     def calculate_supertrend(self, period=7, multiplier=3):
         """
@@ -590,7 +551,7 @@ class BlueKiteModel:
 
         risk_margin = (price * lot_size) / account_leverage
         print("risk_margin", risk_margin)
-        
+        print(risk_margin < (account_balance * 0.03), amt_risk < (account_balance * 0.1), account_balance)
         if risk_margin < (account_balance * 0.03) and amt_risk < (account_balance * 0.1): # change to and later
             # Checking for open positions and number
             position_total = mt5.positions_total()
@@ -671,7 +632,7 @@ class BlueKiteModel:
             self.calculate_indicators()
 
             # Step 2: Predict Market Condition
-            market_condition, probability = self.predict_market_condition(self.data)
+            market_condition, probability = self.predict_market_condition(self.mode)
             print(f"Predicted Market Condition: {market_condition}")     
             
             forecasted = self.combined_trend_forecast['combined_forecast']
@@ -679,7 +640,9 @@ class BlueKiteModel:
             last_close = forecasted.iloc[-1]
             
             # Step 3: Market Sentiment
-            
+            print(f"symbol in news sentiment {self.symbol}")
+            market_sentiment = self.news_sentiment_analysis(self.symbol)
+            print(f"Market Sentiment: {market_sentiment}")
             
             # Check current market data
             current = self.data.iloc[-1]
@@ -727,7 +690,7 @@ class BlueKiteModel:
                 
                 # Checking the order block duration
                 order_duration = abs(current['time'] - order_block['Order Block Time'])
-                # print(order_duration, 'order_duration')
+                print(order_duration, 'order_duration')
                 
                 # Extracting difference in terms of days, hours, and minutes
                 days = order_duration.days
@@ -746,39 +709,103 @@ class BlueKiteModel:
                     take_profit = None
                     order_type = None
                     
-                    if order_block['Order Block'] == 'Bullish' and market_condition == 'Bullish':
-                        revisits = recent_data[(recent_data['Low'] <= order_block['Order Block High'])]
-                        print(revisits)
-                        if not len(revisits) > 0:
-                            insert_order_block(symbol=self.symbol, 
-                                    order_block_type=order_block['Order Block'], 
-                                    high=order_block['Order Block High'], 
-                                    low=order_block['Order Block Low'], 
-                                    timestamp=order_block['Order Block Time'],
-                                    status="used")
+                    if self.risk_level.lower() == 'high':
+                        if order_block['Order Block'] == 'Bullish' or market_condition == 'Bullish' or market_sentiment == 'BUY':
+                            revisits = recent_data[(recent_data['Low'] <= order_block['Order Block High'])]
+                            print(f"revisits {revisits}")
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=pd.Timestamp(order_block['Order Block Time']).isoformat(),
+                                        status="used")
+                                
+                                entry_price = order_block['Order Block High']
+                                stop_loss = order_block['Order Block Low'] - atr
+                                take_profit = entry_price + abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = BUY_LIMIT
+                                
+                        elif order_block['Order Block'] == 'Bearish' or market_condition == 'Bearish' or market_sentiment == 'SELL':
+                            revisits = recent_data[(recent_data['High'] >= order_block['Order Block Low'])]
+                            print(revisits)
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=order_block['Order Block Time'],
+                                        status="used")
+                                
+                                entry_price = order_block['Order Block Low']
+                                stop_loss = order_block['Order Block High'] + atr
+                                take_profit = entry_price - abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = SELL_LIMIT
+                    elif self.risk_level.lower() == 'medium':
+                        if order_block['Order Block'] == 'Bullish' and market_condition == 'Bullish' or market_sentiment == 'BUY':
+                            revisits = recent_data[(recent_data['Low'] <= order_block['Order Block High'])]
+                            print(f"revisits {revisits}")
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=pd.Timestamp(order_block['Order Block Time']).isoformat(),
+                                        status="used")
                             
-                            entry_price = order_block['Order Block High']
-                            stop_loss = order_block['Order Block Low'] - atr
-                            take_profit = entry_price + abs(entry_price - stop_loss) * self.reward_ratio
-                            order_type = BUY_LIMIT
+                                entry_price = order_block['Order Block High']
+                                stop_loss = order_block['Order Block Low'] - atr
+                                take_profit = entry_price + abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = BUY_LIMIT
                             
-                    elif order_block['Order Block'] == 'Bearish' and market_condition == 'Bearish':
-                        revisits = recent_data[(recent_data['High'] >= order_block['Order Block Low'])]
-                        print(revisits)
-                        if not len(revisits) > 0:
-                            insert_order_block(symbol=self.symbol, 
-                                    order_block_type=order_block['Order Block'], 
-                                    high=order_block['Order Block High'], 
-                                    low=order_block['Order Block Low'], 
-                                    timestamp=order_block['Order Block Time'],
-                                    status="used")
-                            
-                            entry_price = order_block['Order Block Low']
-                            stop_loss = order_block['Order Block High'] + atr
-                            take_profit = entry_price - abs(entry_price - stop_loss) * self.reward_ratio
-                            order_type = SELL_LIMIT
-                            
-
+                        elif order_block['Order Block'] == 'Bearish' and market_condition == 'Bearish' or market_sentiment == 'SELL':
+                            revisits = recent_data[(recent_data['High'] >= order_block['Order Block Low'])]
+                            print(revisits)
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=order_block['Order Block Time'],
+                                        status="used")
+                                
+                                entry_price = order_block['Order Block Low']
+                                stop_loss = order_block['Order Block High'] + atr
+                                take_profit = entry_price - abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = SELL_LIMIT
+                    else:
+                        if order_block['Order Block'] == 'Bullish' and market_condition == 'Bullish' and market_sentiment == 'BUY':
+                            revisits = recent_data[(recent_data['Low'] <= order_block['Order Block High'])]
+                            print(f"revisits {revisits}")
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=pd.Timestamp(order_block['Order Block Time']).isoformat(),
+                                        status="used")
+                                
+                                entry_price = order_block['Order Block High']
+                                stop_loss = order_block['Order Block Low'] - atr
+                                take_profit = entry_price + abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = BUY_LIMIT
+                                
+                        elif order_block['Order Block'] == 'Bearish' and market_condition == 'Bearish' and market_sentiment == 'SELL':
+                            revisits = recent_data[(recent_data['High'] >= order_block['Order Block Low'])]
+                            print(revisits)
+                            if not len(revisits) > 0:
+                                insert_order_block(symbol=self.symbol, 
+                                        order_block_type=order_block['Order Block'], 
+                                        high=order_block['Order Block High'], 
+                                        low=order_block['Order Block Low'], 
+                                        timestamp=order_block['Order Block Time'],
+                                        status="used")
+                                
+                                entry_price = order_block['Order Block Low']
+                                stop_loss = order_block['Order Block High'] + atr
+                                take_profit = entry_price - abs(entry_price - stop_loss) * self.reward_ratio
+                                order_type = SELL_LIMIT
+                    
                     self.recent_order_block = latest_order_block
                     
                     if order_type:
@@ -798,6 +825,7 @@ class BlueKiteModel:
             else:
                 print("No Order Block")
         except Exception as e:
+            print(e)
             logging.error(f"Error in analyze_market: {e}")
                          
     def monitor_symbols(self, symbols, mode, time_frame, duration=880, risk_percentage=1.0, window_size=10, reward_ratio=2.2):
@@ -810,30 +838,55 @@ class BlueKiteModel:
         for thread in threads:
             thread.join()
 
-    def sentiment_analysis(self, symbol):
+    def news_sentiment_analysis(self, symbol):
         """Perform sentiment analysis on the data."""
-        # Placeholder for sentiment analysis logic
         # You can use libraries like TextBlob or VADER for sentiment analysis
-        news_url = "https://finviz.com/news.ashx"
+        try:
+            df = pd.read_csv('forex_factory_calendar.csv')
+        except:
+            df = pd.DataFrame(get_news_data())
         
-        # Use TextBlob for quick filtering
-        blob_score = TextBlob(text).sentiment.polarity
-        if abs(blob_score) > 0.3:  # Clear sentiment
-            return "BUY" if blob_score > 0 else "SELL"
+        symbol_data = df[df['Currency'].isin([symbol[:3], symbol[3:]])]
+        symbol_data = symbol_data[symbol_data['Impact'].isin(['High Impact Expected', 'Medium Impact Expected'])]  # Filter by impact level
+        now_time = datetime.datetime.now().time()
+        symbol_data['Time'] = pd.to_datetime(symbol_data['Time'], format='mixed').dt.time
+        symbol_data = symbol_data[symbol_data['Time'] >= now_time]
+        
+        print(symbol_data)
+        
+        if symbol_data.empty:
+            return "NEUTRAL"
 
+        analyzer = SentimentIntensityAnalyzer()
+        sentiment_scores = []
+
+        for event in symbol_data['Event']:
+            score = analyzer.polarity_scores(event)['compound']
+            if abs(score) > 0.2:  # Consider meaningful sentiment
+                sentiment_scores.append(score)
+
+        if not sentiment_scores:
+            return "NEUTRAL"
+
+        try:
+            avg_score = sum(sentiment_scores) / len(sentiment_scores) if len(sentiment_scores) > 1 else sentiment_scores[0]
+        except ZeroDivisionError:
+            avg_score = 0
+
+        if avg_score > 0.1:
+            return "BUY"
+        elif avg_score < -0.1:
+            return "SELL"
+        else:
+            return "NEUTRAL"
+        
+        
     def run_for_symbol(self, symbol, mode, time_frame, duration, risk_percentage, window_size, reward_ratio):
         """Run market analysis for a specific symbol."""
         model = BlueKiteModel(symbol, mode, time_frame, duration, risk_percentage, window_size, reward_ratio)
         model.analyze_market()
         logging.info(f"Analying Market for {symbol}")
     
-    
-    def backtest(self):
-        # Simulate trades on historical data
-        data = self.data
-        for i in range(len(data) - self.window_size):
-            window = data.iloc[i:i + self.window_size]
-            self.analyze_market(window)
 
 
 # BlueKite 11.5.0
@@ -850,47 +903,46 @@ if not mt5.initialize():
 def start_bot():
     symbols = ['XAUUSD', 'EURUSD', 'EURGBP', 'GBPJPY', 'GBPUSD', 'APPLE', 'GOOGLE', 'BTCUSD']
 
-    model = BlueKiteModel(symbol='XAUUSD', mode='test', time_frame=M15, retrain=False)
+    model = BlueKiteModel(symbol='EURUSD', mode='test', time_frame=M15, retrain=True)
     model.analyze_market()
     # model.monitor_symbols(symbols,  mode='live', time_frame=M15)
 
 
 
 def start_job():
-    # Schedule the job to run every minute during active trading hours
-    schedule.every(15).minutes.do(start_bot)
-    print("Trading job started")
+    # Ensure the job isn’t already scheduled
+    if not any(job.job_func == start_bot for job in schedule.jobs):
+        schedule.every(15).minutes.do(start_bot)
+        print("Scheduled start_bot job")
 
 def stop_job():
-    # Cancel only the start_bot job, not the check_time_and_run job
-    for job in schedule.jobs:
+    for job in list(schedule.jobs):
         if job.job_func == start_bot:
             schedule.cancel_job(job)
-    print("Trading job stopped")
-    
+            print("Trading job stopped")
+
 def check_time_and_run():
-    current_time = datetime.datetime.now().strftime("%H:%M")
-    current_day = datetime.datetime.now().strftime("%A")
-    
-    # Check if today is a weekday (Monday to Friday) and within active trading hours
+    now = datetime.datetime.now()
+    current_time = now.strftime("%H:%M")
+    current_day = now.strftime("%A")
+
     if current_day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']:
         if ACTIVE_START_TIME <= current_time <= ACTIVE_END_TIME:
-            for job in schedule.jobs:
-                if not job.job_func == start_bot:
-                    start_job()
+            start_job()
         else:
-            if schedule.jobs:
-                stop_job()
-    else:
-        if schedule.jobs:
             stop_job()
+    else:
+        stop_job()
 
-# Schedule the check_time_and_run function to run every minute
+# Schedule daily news
+schedule.every().day.at("08:00").do(get_news_data)
+
+# Schedule the check every minute
 schedule.every(1).minutes.do(check_time_and_run)
 
-# Main loop to keep the script running
+# Run loop
 # while True:
 #     schedule.run_pending()
 #     time.sleep(1)
 
-# start_bot()
+start_bot()

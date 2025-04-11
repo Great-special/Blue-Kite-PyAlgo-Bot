@@ -12,7 +12,6 @@ Backtesting==0.3.3
 binaryornot==0.4.4
 bokeh==3.5.1
 caerus==0.1.10
-ccxt==4.4.41
 certifi==2024.7.4
 cffi==1.17.1
 chardet==5.2.0
@@ -28,12 +27,7 @@ Cython==3.0.10
 dnspython==2.6.1
 email_validator==2.2.0
 et-xmlfile==1.1.0
-fastapi==0.111.1
-fastapi-cli==0.0.4
 findpeaks==2.6.4
-flet==0.23.2
-flet-core==0.23.2
-flet-runtime==0.23.2
 fonttools==4.53.1
 frozenlist==1.5.0
 h11==0.14.0
